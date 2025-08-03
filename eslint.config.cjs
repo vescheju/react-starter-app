@@ -25,9 +25,11 @@ module.exports = defineConfig([
       globals: {
         ...globals.node,
       },
-      parserOptions: {
-        project: './tsconfig.json',
-        tsconfigRootDir: __dirname, // Root directory for tsconfig resolution
+    },
+    settings: {
+      'import/resolver': {
+        typescript: true,
+        node: true,
       },
     },
   },
